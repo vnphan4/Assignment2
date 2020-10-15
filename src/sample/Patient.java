@@ -3,25 +3,30 @@ package sample;
 import java.util.UUID;
 
 public class Patient {
-    private String name;
-    private String gender;
-    private String bloodType;
-    private int age;
-    private int weight;
-    private int height;
+    public String name;
+    public String gender;
+    public String bloodType;
+    public int age;
+    public int weight;
+    public int height;
     private UUID id;
 
+    public Patient(){}
+
+    public Patient( UUID id, String name, String gender, String bloodType, int age, int weight, int height) {
+        this.id = id;
+        this.name = name;
+        this.gender = gender;
+        this.bloodType = bloodType;
+        this.age = age;
+        this.weight = weight;
+        this.height = height;
+
+    }
     @Override
     public String toString() {
-        return "Patient{" +
-                "name='" + name + '\'' +
-                ", gender='" + gender + '\'' +
-                ", bloodType='" + bloodType + '\'' +
-                ", age=" + age +
-                ", weight=" + weight +
-                ", height=" + height +
-                ", id=" + id +
-                '}';
+        return  name + '\t' + gender + '\t' + bloodType + '\t' + age + '\t' +  weight +'\t' + height;
+
     }
 
     public String getName() {
@@ -80,14 +85,5 @@ public class Patient {
         this.id = id;
     }
 
-    public Patient( UUID id, String name, String gender, String bloodType, int age, int weight, int height) {
-        this.id = id;
-        this.name = name;
-        this.gender = gender;
-        this.bloodType = bloodType;
-        this.age = age;
-        this.weight = weight;
-        this.height = height;
 
-    }
 }
