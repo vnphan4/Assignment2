@@ -80,13 +80,14 @@ public class Patient {
         this.id = id;
     }
 
-    public Patient(String name, String gender, String bloodType, int age, int weight, int height, UUID id) {
+    public Patient( UUID id, String name, String gender, String bloodType, int age, int weight, int height) {
+        this.id = id;
         this.name = name;
         this.gender = gender;
         this.bloodType = bloodType;
         this.age = age;
         this.weight = weight;
         this.height = height;
-        this.id = id;
+
     }
 }
